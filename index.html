@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];// dodawanie wszystkich liczb
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum = sum + arr[i];
+        }
+        console.log(sum);
+
+        function addition(a, b) { // dodawanie
+            let result = a + b;
+            console.log("wynik dodawania:" + result);
+        }
+        addition(1, 2);
+        addition(2, 5);
+
+        function multiplay(a, b) { // mnozenie
+            let result = a * b;
+            return result;
+        }
+        let multiplayResult = multiplay(5, 10);
+        console.log(+ multiplayResult);
+
+        function multiply(a, b, c) {
+            let result = a * b * c;
+            return result;
+        }
+        let multiplyResult = multiply(2, 3, 10);
+        console.log(+ multiplyResult);//60
+
+        let multiplyResult2 = multiply(4, 5, 11);
+        console.log(+ multiplyResult2);//220
+
+
+
+        function substract(a, b) { // odejmowanie
+            let result = a - b;
+            console.log(result);
+
+        }
+        let substractResult = substract(7, 6);
+
+
+        let money = 1000;
+        let interestRate = 0.05;
+        function calculateInvest(money, interestRate) {
+            return money + (money * interestRate);
+        }
+
+        let Invest = calculateInvest(money, interestRate);
+        console.log(Invest); // 1050
+        console.log(calculateInvest(2200, 0.045));//2299
+
+        function calculatBmi(weight, height) {
+            let bmi = weight / (height * height);
+            console.log(+ bmi); // BMI obliczamy dzieląc masę ciała (w kilogramach) przez wzrost do kwadratu (w metrach) 24.489795918367346
+
+        }
+        calculatBmi(75, 1.75)
+
+
+        function convertToSeconds(hours, minutes) {
+            return minutes * 60 + (hours * 60 * 60);
+        }
+        function convertToHours(minutes) {
+            return minutes / 60;
+        }
+        let seconds = convertToSeconds(3, 25);
+        console.log("num seconds:" + seconds);// zmien na sekundy; num seconds:12300
+        let hours = convertToHours(120);
+        console.log(+ hours);// z minut 120  na 2 godzin 
+
+        function findLargest(num1, num2) { // ktora lizczba jest wieksza
+            if (num1 > num2) {
+                console.log("num1 jest wieksza:" + num1);
+                return num1;
+
+            } else if (num2 > num1) {
+                console.log("num2 jest wieksza:" + num2);
+                return num2;
+            } else {
+                console.log("num1=num2:" + num1);
+                return num1;
+            }
+
+        }
+        let v1 = findLargest(3, 10);// num2 jest wieksza:10
+        console.log("zwrocona wartosc w v1:" + v1);// zwrocona wartosc w v1:10
+        let v2 = findLargest(12, 7);// num1 jest wieksza:12
+        console.log("zwrocona wartosc w v1:" + v2);//zwrocona wartosc w v1:12
+
+        function cToF(celsius) {// \xB0
+            let toF = celsius * 9 / 5 + 32;
+            console.log(celsius + "\xB0 celsjusza to " + toF + "\xB0 Fahrenhaita");
+            return toF;
+
+        }
+
+        function fToC(Fahrenhait) {
+            let toC = (Fahrenhait - 32) * 5 / 9;
+            console.log(Fahrenhait + "\xB0 Fahrenhaita to " + toC + "\xB0 Celsujusza");
+            return toC
+        }
+        let f = cToF(20,);
+        let c = fToC(86,);
+
+
+
+
+        
+
+        let car = {
+            brand: "Fiat",
+            name: "Robur",
+            colors: "green",
+        };
+        car.weight = 1270;
+        console.log(car);
+
+
+        function makeCar(model, color, topSpeed) {
+            return {
+                model: model,
+                color: color,
+                topSpeed: topSpeed,
+                manufacturer: {
+                    name: "Dodge",
+                    country: "USA",
+                }
+            }
+        }
+        console.log(makeCar("Viper", "blue", 290));
+        console.log(makeCar("Ram", "red", 240));
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
